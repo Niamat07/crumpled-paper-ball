@@ -62,36 +62,16 @@ function draw() {
   leftSide.display();
 
 
+
+
   drawSprites();
  
 }
 
-//Change the canvas values and increase the size of the canvas.
-
-//Create a variable i.e. ball.
-
-
-//*In setup(), create a balls_option variable and assign properties.
-//Make sure you set the density of the paper to 1.2 as shown below.*
-
-
-
-//The ball object will be the moving object in the game. (See Hint 1)
-//You have to create a circular body for the ball and add it to the World.
-
-//Create a blueprint for the Ground, on which the trash can stands, and the crumpled paper ball may fall on.
-//To display ground on the canvas create a display() in the ground.js class.
-//Call display() inside draw().
-
-
-//To create a bucket create two more objects for ground class i.e. leftSide and rightSide.
-//Call display() of ground.js with leftSide and rightSide class.
-
-
-//Make the crumpled paper ball jump and fall into the bucket with the up arrow key. (See Hint 2)
-
-//Make sure the project works before you submit it.
-//*Refer to the images given above for reference.
-
-
-
+function keyPressed(){
+	if(keyCode===UP_ARROW){
+		function vForce(){
+			Matter.Body.applyForce(ball,{x:0,y:0},{x:0,y:-0.05});
+			}
+	}
+}
